@@ -182,8 +182,6 @@ def player_numbers(team_name)
       inner_key[:number].collect do |x| 
         x << array
         binding.pry
-        if team_name == inner_hash[:team_name]
-        end
       end
     end
     return array
