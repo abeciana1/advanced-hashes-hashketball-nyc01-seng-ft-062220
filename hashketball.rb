@@ -206,7 +206,6 @@ def big_shoe_rebounds
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      binding.pry
       shoe_array.push(inner_key[:shoe])
       big_shoe = shoe_array.sort[-1]
       inner_key.collect do |key, val|
