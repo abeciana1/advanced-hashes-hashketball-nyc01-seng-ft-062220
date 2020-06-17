@@ -183,7 +183,7 @@ def player_numbers(team_name)
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
       array.push(inner_key[:number]) if
-      inner_hash[:team]
+      inner_hash[:team_name] == team_name
     end
     return array
   end
