@@ -186,7 +186,7 @@ def player_numbers(name_of_team)
       if inner_hash[:team_name] == name_of_team
         array.push(inner_key[:number])
         return array
-        binding.pry
+        #binding.pry
       end
     end
   end
