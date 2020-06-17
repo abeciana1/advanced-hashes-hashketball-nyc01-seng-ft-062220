@@ -179,7 +179,7 @@ def player_numbers(team_name)
   
   game_hash.each_with_object([]) do |(location, inner_hash), array|
     inner_hash[:players].each do |inner_key|
-      binding.pry
+      inner_key
       if team_name == inner_hash[:team_name]
       end
     end
