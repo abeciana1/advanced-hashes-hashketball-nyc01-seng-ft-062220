@@ -183,7 +183,6 @@ def player_numbers(team_name)
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
       inner_key[:number].collect do |x| 
-        x << array
         binding.pry
       end
     end
