@@ -182,9 +182,9 @@ def player_numbers(team_name)
     inner_hash[:players].collect do |inner_key|
       
       if inner_hash[:team_name] == team_name
-        return inner_hash[:number]
+        array.push(inner_hash[:number])
       end
     end
-    # return array
+    return array
   end
 end
