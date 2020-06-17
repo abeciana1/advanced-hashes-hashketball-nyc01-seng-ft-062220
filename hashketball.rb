@@ -185,6 +185,6 @@ def player_numbers(team_name)
         return inner_hash[:number]
       end
     end
-    return array
+    # return array
   end
 end
