@@ -176,7 +176,7 @@ def team_names
 end
 
 def player_numbers(name_of_team)
-  #final_array = []
+  final_array = []
   
   
   #game_hash.each_with_object([]) do |(location, inner_hash), final_array|
