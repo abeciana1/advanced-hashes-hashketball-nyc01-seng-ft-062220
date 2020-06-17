@@ -208,6 +208,8 @@ def big_shoe_rebounds
     inner_hash[:players].each do |inner_key|
       shoe_array.push([inner_key[:shoe])
       big_shoe = shoe_array.sort[-1]
+      if 
+      end
     end
   end
 end
