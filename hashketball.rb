@@ -176,11 +176,11 @@ def team_names
 end
 
 def player_numbers(name_of_team)
-  #array = []
+  #final_array = []
   
   
-  game_hash.each_with_object([]) do |(location, inner_hash), final_array|
-  #game_hash.each do |(location, inner_hash)|
+  #game_hash.each_with_object([]) do |(location, inner_hash), final_array|
+  game_hash.each do |(location, inner_hash)|
     #binding.pry
     inner_hash[:players].each do |inner_key|
       if inner_hash[:team_name] == name_of_team
@@ -191,5 +191,4 @@ def player_numbers(name_of_team)
     end
   end
   # return array
-  
 end
