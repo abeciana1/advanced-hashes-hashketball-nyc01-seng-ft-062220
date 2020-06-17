@@ -205,8 +205,8 @@ def big_shoe_rebounds
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      inner_key[:shoe].collect do |x|
-      binding.pry
+      if inner_key[:shoe] > min_shoe
+        min_shoe = inner_key
     end
   end
 end
