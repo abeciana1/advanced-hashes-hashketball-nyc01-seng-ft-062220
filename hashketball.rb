@@ -182,7 +182,8 @@ def player_numbers(team_name)
   #game_hash.each_with_object([]) do |(location, inner_hash), array|
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      inner_key.collect do |x| 
+      inner_key.collect do |x|
+        binding.pry
         x << array
       end
     end
