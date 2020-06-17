@@ -184,7 +184,6 @@ def player_numbers(team_name)
     inner_hash[:players].each do |inner_key|
       inner_key[:number].collect do |x|
         binding.pry
-        x << array
       end
     end
     return array
