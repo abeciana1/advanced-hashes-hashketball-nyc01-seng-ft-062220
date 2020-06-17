@@ -209,8 +209,9 @@ def big_shoe_rebounds
       shoe_array.push(inner_key[:shoe])
       big_shoe = shoe_array.sort[-1]
       inner_key.collect do |key, val|
-        if key == :shoe
-          if 
+        if key == :shoe && val == big_shoe
+          return inner_key[:rebounds]
+        end
         binding.pry
       end
     end
