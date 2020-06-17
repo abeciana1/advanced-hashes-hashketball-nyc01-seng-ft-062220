@@ -1,3 +1,7 @@
+require "pry"
+
+# require './hashketball.rb'
+
 # Write your code below game_hash
 def game_hash
   {
@@ -126,4 +130,62 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(player_name)
+  
+  game_hash.each do |(location, inner_hash)|
+    binding.pry
+    inner_hash[:players].each do |inner_key| #inner_key[:player_name] = "Alan Anderson"
+      if inner_key[:player_name] == player_name
+        return inner_key[:points]
+      end
+    end
+  end
+end
+
+def shoe_size(player_name)
+    game_hash.each do |(location, inner_hash)|
+    
+    inner_hash[:players].each do |inner_key| #inner_key[:player_name] = "Alan Anderson"
+      if inner_key[:player_name] == player_name
+        return inner_key[:shoe]
+      end
+    end
+  end
+end
+
+def team_colors(team_name)
+  game_hash.each do |(location, inner_hash)|
+    inner_hash.each do |(team_data, value)|
+      if inner_hash[:team_name] == team_name
+        return inner_hash[:colors]
+      end
+    end
+  end
+end
+
+def team_names
+  array = []
+  
+  game_hash.each do |(location, inner_hash)|
+    inner_hash.each do |(team_data, name)|
+    end
+    if !array.include?(inner_hash[:team_name])
+      array.push(inner_hash[:team_name])
+    end
+  end
+  return array
+end
+
+def player_numbers(team_name)
+  array = []
+  
+  game_hash.each do |(location, inner_hash)|
+    inner_hash[:players].collect do |inner_key|
+      
+      if inner_hash[:team_name] == team_name
+        return inner_hash[:colors]
+      end
+    end
+    return array
+  end
+end
