@@ -210,7 +210,6 @@ def big_shoe_rebounds
       shoe_array.push([inner_key[:shoe])
       big_shoe = shoe_array.sort[-1]
       binding.pry
-      end
     end
   end
 end
