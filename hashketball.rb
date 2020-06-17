@@ -133,7 +133,6 @@ end
 def num_points_scored(player_name)
   
   game_hash.each do |(location, inner_hash)|
-    binding.pry
     inner_hash[:players].each do |inner_key| #inner_key[:player_name] = "Alan Anderson"
       if inner_key[:player_name] == player_name
         return inner_key[:points]
