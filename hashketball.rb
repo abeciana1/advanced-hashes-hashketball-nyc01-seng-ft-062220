@@ -194,8 +194,7 @@ def player_stats(player_name)
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      if inner_key[:player_name] == player_name
-        return inner_key
+      shoe_size.push(inner_key[:shoe])
       end
     end
   end
