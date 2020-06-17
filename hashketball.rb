@@ -177,18 +177,15 @@ end
 
 def player_numbers(name_of_team)
   final_array = []
-  
-  
-  #game_hash.each_with_object([]) do |(location, inner_hash), final_array|
+
   game_hash.each do |(location, inner_hash)|
     #binding.pry
-    inner_hash[:players].collect do |inner_key|
-      if inner_hash[:team_name] == name_of_team
+    if inner_hash[:team_name] == name_of_team
+      inner_hash[:players].collect do |inner_key|
         final_array.push(inner_key[:number])
         binding.pry
       end
-      return final_array
     end
   end
-  # return array
+  return final_array
 end
