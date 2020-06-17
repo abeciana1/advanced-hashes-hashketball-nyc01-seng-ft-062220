@@ -200,3 +200,12 @@ def player_stats(player_name)
   end
 end
 
+def big_shoe_rebounds
+  
+  game_hash.each do |(location, inner_hash)|
+    inner_hash[:players].each do |inner_key|
+      binding.pry
+    end
+  end
+end
+
