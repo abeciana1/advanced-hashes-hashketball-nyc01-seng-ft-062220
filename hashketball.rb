@@ -190,12 +190,11 @@ def player_numbers(name_of_team)
 end
 
 def player_stats(player_name)
-  shoe_size = []
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      shoe_size.push(inner_key[:shoe])
-      shoe_sort = shoe_size.sort
+      if inner_key[:player_name] == player_name
+        return inner_key
       end
     end
   end
@@ -206,7 +205,7 @@ def big_shoe_rebounds
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      inner_key[:shoe].collect do |
+      inner_key[:shoe].collect do |x|
       binding.pry
     end
   end
