@@ -203,6 +203,7 @@ end
 def big_shoe_rebounds
   big_shoe = nil
   shoe_array = []
+  rebound = nil
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
@@ -210,11 +211,11 @@ def big_shoe_rebounds
       big_shoe = shoe_array.sort[-1]
       inner_key.collect do |key, val|
         if key == :shoe && val == big_shoe
-          return inner_key[:rebounds]
+           rebound = inner_key[:rebounds]
         end
-        #binding.pry
       end
     end
   end
+  return reboun
 end
 
