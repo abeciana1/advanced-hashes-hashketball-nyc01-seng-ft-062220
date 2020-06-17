@@ -182,6 +182,7 @@ def player_numbers(team_name)
     inner_hash[:players].collect do |inner_key|
       
       if inner_hash[:team_name] == team_name
+        binding.pry
         return inner_hash[:colors]
       end
     end
