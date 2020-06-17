@@ -187,6 +187,7 @@ def player_numbers(name_of_team)
         final_array.push(inner_key[:number])
         #binding.pry
       end
+      return final_array
     end
   end
   # return array
