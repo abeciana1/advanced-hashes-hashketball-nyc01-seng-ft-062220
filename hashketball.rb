@@ -201,9 +201,11 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
+  min_shoe = 2
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
+      inner_key[:shoe].collect do |
       binding.pry
     end
   end
