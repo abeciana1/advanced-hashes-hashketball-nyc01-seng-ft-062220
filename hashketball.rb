@@ -185,9 +185,9 @@ def player_numbers(name_of_team)
     inner_hash[:players].each do |inner_key|
       if inner_hash[:team_name] == name_of_team
         array.push(inner_key[:number])
-        return array
         #binding.pry
       end
     end
   end
+  return array
 end
