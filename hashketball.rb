@@ -190,6 +190,7 @@ def player_numbers(name_of_team)
 end
 
 def player_stats(player_name)
+  shoe_size = []
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
