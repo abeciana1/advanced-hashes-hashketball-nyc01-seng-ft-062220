@@ -201,12 +201,13 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-  min_shoe = 2
+  big_shoe = nil
+  shoe_array = []
   
   game_hash.each do |(location, inner_hash)|
     inner_hash[:players].each do |inner_key|
-      if inner_key[:shoe] > min_shoe
-        min_shoe = inner_key[:shoe]
+      shoe_array.push([inner_key[:shoe])
+      big_shoe = shoe_array.sort[-1]
     end
   end
 end
